@@ -4,3 +4,4 @@ MANIFEST
 README
 t/Apache2-FakeRequest.t
 lib/Apache2/FakeRequest.pm
+META.yml                                 Module meta-data (added by MakeMaker)
