@@ -1,0 +1,6 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/Apache2-FakeRequest.t
+lib/Apache2/FakeRequest.pm
