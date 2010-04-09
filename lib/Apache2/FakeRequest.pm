@@ -2,7 +2,7 @@ package Apache2::FakeRequest;
 
 use base Apache2::Request;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 sub new {
     my $class = shift;
