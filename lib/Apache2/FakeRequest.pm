@@ -1,8 +1,9 @@
 package Apache2::FakeRequest;
 
-use base Apache2::Request;
+use base 'Apache2::Request';
+use strict;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 sub new {
     my $class = shift;
@@ -47,6 +48,9 @@ my @methods = qw{
 
 sub elem {
     my($self, $key, $val) = @_;
+    return
+        unless ref($self) eq 'Apache2::FakeRequest';
+
     $self->{$key} = $val if $val;
     $self->{$key};
 }
@@ -208,7 +212,7 @@ get this module working, testing, and installing correctly.
 
 =head1 AUTHOR
 
-Jeff Platter E<lt>shakey2k2@gmail.com<gt>
+Jeff Platter C<< <jplatter at cpan.org> >>
 
 =head1 COPYRIGHT AND LICENSE
 
